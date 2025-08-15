@@ -4,27 +4,19 @@ from tkinter import messagebox
 from tkinter import font
 
 def lighten_color(color, factor=0.1):
-    """
-    Lightens an RGB color by a given factor.
-    """
+
     return tuple(min(255, int(c + (255 - c) * factor)) for c in color)
 
 def darken_color(color, factor=0.1):
-    """
-    Darkens an RGB color by a given factor.
-    """
+    
     return tuple(max(0, int(c * (1 - factor))) for c in color)
 
 def rgb_to_hex(rgb):
-    """
-    Converts an RGB tuple to a hexadecimal color code.
-    """
+    
     return "#{:02x}{:02x}{:02x}".format(*rgb)
 
 def create_color_label(parent, hex_code, text_color):
-    """
-    Creates and returns a styled label for a color shade.
-    """
+    
     label = tk.Label(parent, text=hex_code, bg=hex_code, fg=text_color,
                      font=("Helvetica", 10, "bold"), relief=tk.RAISED, bd=2,
                      width=15, height=2)
