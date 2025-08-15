@@ -31,9 +31,7 @@ def create_color_label(parent, hex_code, text_color):
     return label
 
 def choose_color():
-    """
-    Prompts the user to choose a color and generates a palette of shades.
-    """
+    
     color_code = colorchooser.askcolor(title="Choose a color")
     if color_code[0] is None:
         return
